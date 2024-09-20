@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultation Module - Care Anywhere</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Patient Information Section -->
+    <div class="patient-info">
+        <h2>Patient Information</h2>
+        <div class="patient-details">
+            <img src="1430453.png" alt="Patient Profile Picture">
+            <div>
+                <p><strong>Name:</strong> Shivi Gupta</p>
+                <p><strong>Age:</strong> 19</p>
+                <p><strong>Symptoms:</strong> Fever, Cough</p>
+                <p><strong>Vital Signs:</strong> BP: 120/80, Heart Rate: 72 bpm</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Doctor Field and Selection Section -->
+    <div class="doctor-selection">
+        <h2>Choose Field and Doctor</h2>
+        <form>
+            <label for="doctor-field">Choose Doctor's Field:</label>
+            <select id="doctor-field" onchange="populateDoctors()">
+                <option value="" disabled selected>Select Field</option>
+                <option value="general">General Medicine</option>
+                <option value="cardiology">Cardiology</option>
+                <option value="dermatology">Dermatology</option>
+                <option value="pediatrics">Pediatrics</option>
+            </select>
+
+            <label for="doctor-list">Choose Doctor:</label>
+            <select id="doctor-list">
+                <option value="" disabled selected>Select Doctor</option>
+            </select>
+        </form>
+    </div>
+
+    <!-- Doctor's Observation Form -->
+    <div class="observation-form">
+        <h2>Doctor's Observations</h2>
+        <form>
+            <label for="observations">Observations:</label>
+            <textarea id="observations" rows="4" placeholder="Enter observations"></textarea>
+
+            <label for="symptoms">Symptoms:</label>
+            <input type="text" id="symptoms" placeholder="Enter symptoms">
+
+            <label for="health-parameters">Health Parameters:</label>
+            <input type="text" id="health-parameters" placeholder="Enter health parameters">
+
+           
+            <button type="submit">Submit Observations</button>
+        </form>
+    </div>
+
+    <button class="arrow-button" onclick="goToNextPage()"></button>
+
+<script>
+    function goToNextPage() {
+        window.location.href = 'nextPage.html'; // Replace with the actual next page URL
+    }
+</script>
+
+
+</body>
+</html>
